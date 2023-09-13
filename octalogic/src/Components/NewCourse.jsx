@@ -28,7 +28,7 @@ const NewCourse = () => {
   let addCourse = async () => {
     // console.log(obj);
     try {
-      const response = await axios.post("http://localhost:8080/courses", obj);
+      const response = await axios.post("https://octalogic-uei3.onrender.com/courses", obj);
 
       console.log(response.data);
       navigate("/courses");
@@ -40,7 +40,7 @@ const NewCourse = () => {
   return (
     <Container
       mt={"100px"}
-      boxShadow={"0 0 10px pink"}
+      boxShadow={"0 0 10px black"}
       p={"25px"}
       borderRadius={"10px"}
     >
@@ -105,14 +105,14 @@ const NewCourse = () => {
 
         <Flex justifyContent={"space-evenly"} mt={"20px"}>
           <Button
-            colorScheme={"pink"}
+            colorScheme={"teal"}
             onClick={() => {
               navigate("/courses");
             }}
           >
             Cancel
           </Button>
-          <Button colorScheme={"pink"} onClick={addCourse}>
+          <Button colorScheme={"orange"} onClick={addCourse}>
             Add Course
           </Button>
         </Flex>

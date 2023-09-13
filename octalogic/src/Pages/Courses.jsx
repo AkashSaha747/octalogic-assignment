@@ -51,7 +51,7 @@ const Courses = () => {
         price: editPrice,
       };
       const resp = await axios.patch(
-        `http://localhost:8080/courses/${id}`,
+        `https://octalogic-uei3.onrender.com/courses/${id}`,
         data
       );
       setChange(!change);
@@ -70,7 +70,7 @@ const Courses = () => {
         ...e,
         status: newStatus,
       };
-      const resp = await axios.put(`http://localhost:8080/courses/${id}`, data);
+      const resp = await axios.put(`https://octalogic-uei3.onrender.com/courses/${id}`, data);
       setChange(!change);
       console.log(resp.data);
     } catch (error) {
@@ -86,7 +86,7 @@ const Courses = () => {
         ...e,
         status: newStatus,
       };
-      const resp = await axios.put(`http://localhost:8080/courses/${id}`, data);
+      const resp = await axios.put(`https://octalogic-uei3.onrender.com/courses/${id}`, data);
       setChange(!change);
       console.log(resp.data);
     } catch (error) {
@@ -101,7 +101,7 @@ const Courses = () => {
     try {
       if (filter == "") {
         let resp = await axios.get(
-          `http://localhost:8080/courses?limit=10&_page=${page}`
+          `https://octalogic-uei3.onrender.com/courses?limit=10&_page=${page}`
         );
         let info = resp.data;
         setData(info);
@@ -110,7 +110,7 @@ const Courses = () => {
         console.log(totalPages);
       } else {
         let resp = await axios.get(
-          `http://localhost:8080/courses?limit=10&_page=${page}&course=${filter}`
+          `https://octalogic-uei3.onrender.com/courses?limit=10&_page=${page}&course=${filter}`
         );
         let info = resp.data;
         setData(info);
@@ -119,7 +119,7 @@ const Courses = () => {
         console.log(info);
       }
 
-      let resp = await axios.get(`http://localhost:8080/courses?status=open`);
+      let resp = await axios.get(`https://octalogic-uei3.onrender.com/courses?status=open`);
       let info = resp.data;
       settot(info.length);
     } catch (error) {

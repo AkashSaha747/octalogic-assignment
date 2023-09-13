@@ -21,7 +21,7 @@ const Login = () => {
 
   let handleLogin = async () => {
     // console.log(email,password);
-    let resp = await axios.get("http://localhost:8080/users");
+    let resp = await axios.get("https://octalogic-uei3.onrender.com/users");
     // console.log(data.data);
     let data = resp.data;
     data?.map((e) => {
