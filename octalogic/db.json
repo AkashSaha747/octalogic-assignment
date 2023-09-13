@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "a@gmail.com",
+      "password": "a@123"
+    },
+    {
+      "email": "b@b.com",
+      "password": "b@123",
+      "id": 2
+    }
+  ],
+  "courses": [
+    {
+      "course": "z",
+      "description": "a",
+      "instructor": "z",
+      "instrument": "Flute",
+      "day": "Thursday",
+      "price": "4",
+      "status": "open",
+      "id": 1
+    },
+    {
+      "course": "c",
+      "description": "c",
+      "instructor": "z",
+      "instrument": "Flute",
+      "day": "Friday",
+      "price": "1",
+      "status": "open",
+      "id": 2
+    }
+  ]
+}
